@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1.07rem;
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+        "ヒラギノ角ゴ pro w3", sans-serif;
+    line-height: 1.7;
+    color: #555555;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*ヘッダー*/
+.page-header {
+    height: 500px;
+    background-image: url(/images/poppies-174276_1280.jpg);
+    background-size: cover;
+}
+
+.wrapper_nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: auto;
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+    animation: slide-skew 0.4s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+@keyframes slide-skew {
+    0% {
+        transform: translate(180px, 30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+    20%,
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.page-header {
+    display: flex;
+
+}
+
+/*斜め*/
+.test {
+    position: absolute;
+}
+
+.contents {
+    position: relative;
+    top: -380px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contents::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background: #787e45;
+    transform-origin: left center;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
+
+.contents_inner {
+    width: 60%;
+    margin: 0 auto;
+    padding: 450px 10px 120px;
+    color: #fff;
+    text-align: center;
+}
+
+/*2真ん中*/
+.contents2 {
+    z-index: 3;
+}
+
+/*3下*/
+.contents3 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.contents3::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    bottom: -10%;
+    width: 150%;
+    height: 50%;
+    background: #787e45;
+    transform-origin: left center;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+main {}
+
+/*フッター*/
+.contents_fot {
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -2;
+    background-image: url(/images/poppies-174276_1280.jpg);
+    height: 500px;
+}
+
+.contents_inner_fot {
+    padding: 450px 10px 0;
+    color: #fff;
+    text-align: center;
+}

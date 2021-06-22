@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1.07rem;
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+        "ヒラギノ角ゴ pro w3", sans-serif;
+    line-height: 1.7;
+    color: #555555;
+    display: flex;/*フレックスボックスに有効に*/
+    flex-flow: column; /*要素を縦に並べる*/
+    min-height: 100vh;/*最小でも画面の高さ分のbodyの高さを担保する*/
+    
+}
+
+main{
+    flex: 1;/*画面の高さから他の同レイヤーの要素の高さを引いた値に*/
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-family: serif;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: serif;
+    font-size: 1.7rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*ヘッダー*/
+.page-header {
+    height: 500px;
+    background-image: url(/images/poppies-174276_1280.jpg);
+    background-size: cover;
+}
+
+.wrapper_nav {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.logo {
+    height: auto;
+    width: 200px;
+    margin-top: 5%;
+}
+
+.Headline {
+    animation: SlideIn 1.6s;
+
+}
+
+/* CSSアニメーションの設定 */
+
+@keyframes SlideIn {
+    0% {
+        opacity: 0;
+        /*初期状態では透明に transform: translateX(64px);*/
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin-top: 34px;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.main-nav ul {
+    text-align: right;
+}
+
+.page-header {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.space {
+    height: 300px;
+}
+
+/*斜め*/
+main{
+    height: 500px;
+}
+.contents {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    transform-origin: left center;
+    transform: rotate(5deg);
+    z-index: 2;
+    width: 2100px;
+    height: 200px;
+    left: -10%;
+    margin-top: 300px;
+}
+
+.test-2 {
+    position: relative;
+    height: 500px;
+}
+
+.contents2 {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    transform-origin: left center;
+    transform: rotate(-5deg);
+    z-index: 3;
+    width: 2100px;
+    height: 200px;
+    left: -10%;
+    margin-top: -350px;
+    overflow: hidden;
+}
+
+.contents3 {
+    width: 100%;
+    height: auto;
+}
+
+.item1 {
+    padding: 0 20%;
+}
+
+.tpk1 {
+    width: 40%;
+    left: 20%;
+    align-items: center;
+}
+
+/*
+.contents_inner {
+    transform: rotate(-5deg);
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    color: rgb(187, 159, 159);
+}
+*/
+
+/*
+.contents::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background: #787e45;
+    transform-origin: left center;
+    transform: rotate(5deg);
+    z-index: 3;
+}
+
+*/
+/*3下*/
+
+
+/*縦書き*/
+.rtol {
+    writing-mode: vertical-rl;
+    width: 60%;
+    height: 100%;
+}
+
+.rtol h2 {
+    padding: 20px;
+}
+
+.rtol p {
+    margin-top: 10%;
+    text-shadow: 2px 2px 3px #fff,
+        -2px 2px 3px #fff,
+        2px -2px 3px #fff,
+        -2px -2px 3px #fff;
+}
+
+.c3a.c3b.c3c {
+    display: inline-block;
+}
+
+.pad {
+    margin-top: 20%;
+}
+
+.c3a {
+    background-image: url(../images/wreath-803012_1280.jpg);
+    background-size: 50%;
+    background-position: right bottom;
+    background-color: rgb(255, 255, 255, 0.7);
+    background-blend-mode: screen;
+}
+
+.c3b {
+    background-image: url(../images/glass-2781946_1920.jpg);
+    background-size: 50%;
+    background-position: right bottom;
+    background-color: rgb(255, 255, 255, 0.5);
+    background-blend-mode: screen;
+}
+
+.c3c {
+    background-image: url(../images/gifts-4881424_1920.jpg);
+    background-size: 50%;
+    background-position: right bottom;
+    background-color: rgb(255, 255, 255, 0.5);
+    background-blend-mode: screen;
+}
+
+.animation2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: 5s;
+    transform: translateY(30px);
+}
+
+/*アニメーション要素までスクロールした時のスタイル*/
+.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+.button-1 {
+    width: 300px;
+    height: 70px;
+    padding: 20px 25px;
+    background-color: rgb(219, 201, 201);
+    color: rgb(0, 0, 0);
+    margin: 10% 10% 0 40%;
+}
+
+.button-1 a {
+    color: rgb(0, 0, 0);
+}
+
+.button-1:hover {
+    color: #555;
+    background-color: #fff;
+    border: solid 1px rgb(219, 201, 201);
+}
+
+.center {
+    text-align: center;
+}
+
+/*menu*/
+.menu-grid {
+    display: grid;
+    gap: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10%;
+}
+
+.right {
+    text-align: right;
+}
+
+.button {
+    width: 300px;
+    height: 70px;
+    padding: 20px 25px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-weight: 500px;
+}
+
+.button a {
+    color: #fff;
+}
+
+.button:hover {
+    color: #555;
+    background-color: #fff;
+    border: solid 1px #555555;
+}
+
+/*contact*/
+.form {
+    text-align: center;
+    padding-top: 10%;
+    width: 100%;
+}
+
+.con2-contact {
+    margin-top: 200%;
+    background: #fff;
+}
+
+.map {
+    text-align: center;
+    width: 100%;
+    padding: 0 5% 0 5%;
+}
+
+.tenpo-wrapper {
+    display:flex;
+    justify-content: center;
+}
+
+
+
+.tenpoitem img {
+    width: 100%;
+}
+
+.tenpoitem {
+    margin: 2%;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+.icon-wrapper {
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px;
+    gap: 5px;
+    grid-template-rows: 30px;
+    padding-left: 2;
+    justify-content: center;
+}
+
+.c-item img {
+    width: 30px;
+    height: 30px;
+
+}
+
+/*.i-grid {
+    width: 900px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 250px;
+    justify-content: center;
+}*/
+.i-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    background-color: rgb(226, 216, 208);
+    padding: 20px;
+}
+
+.item-left {
+    margin: 25px 25px 25px 50px;
+}
+
+/* 上 | 右 | 下 | 左 */
+.item-right {
+    margin: 25px 50px 25px 25px;
+}
+
+/*フッター*/
+
+.contents_fot {
+    position: relative;
+    min-height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -2;
+    height: 200px;
+    overflow: hidden;
+}
+
+.contents_fot {
+    background-image: url(/images/poppies-174276_1280.jpg);
+}
+
+.contents_fot p {
+    text-align: center;
+    color: #fff
+}
+
+.c-con {
+    margin-top: 200%;
+}
+
